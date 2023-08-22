@@ -17,7 +17,7 @@ function ContactUs() {
 
   return (
     <div className="container d-flex">
-      <div className="column">
+      <div className={`${styles.detailsContainer} column`}>
         <div
           className={`${styles.contactDetails}  text d-flex 
         `}
