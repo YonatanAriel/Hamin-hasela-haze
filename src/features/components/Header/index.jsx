@@ -25,7 +25,9 @@ function Header() {
       >
         <ul
           className={`${styles.linksContainer}`}
-          style={{ display: showLinks && "flex" }}
+          style={{
+            display: showLinks && "flex",
+          }}
         >
           <li>
             <NavLink

@@ -72,7 +72,7 @@ function Home() {
         </div>
         <img
           src="public/assets/photos/WhatsApp Image 2018-06-13 at 09.02.13 (1).jpeg"
-          alt=""
+          alt="mklkl"
           className="column"
         />
       </section>
