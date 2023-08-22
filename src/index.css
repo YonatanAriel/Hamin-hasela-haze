@@ -1,0 +1,38 @@
+:root {
+  font-family: "Noto Sans Hebrew", sans-serif, Arial, Helvetica;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --main-color-darker: rgb(109, 104, 117);
+  --main-color-dark: rgb(181, 131, 141);
+  --main-color-medium: rgb(229, 152, 155);
+  --main-color-light: rgb(255, 180, 162);
+  --main-color-lighter: rgb(255, 205, 178);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
