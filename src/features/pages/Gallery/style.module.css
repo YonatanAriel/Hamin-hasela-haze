@@ -2,3 +2,12 @@
   max-width: 80%;
   margin: 0 auto;
 }
+.imgsFlex {
+  /* flex-shrink: 1; */
+}
+.imgsFlex img:first-child {
+  /* max-width: 47%; */
+}
+.imgsFlex img:last-child {
+  /* margin-left: auto; */
+}

@@ -9,29 +9,27 @@ function Home() {
           className="column"
         />
         <div className="column text">
-          <h1>Lorem ipsum dolor, sit. </h1>
+          <h1>באוצר נערכים להגעת כלכלני מוד'יס על</h1>
           <p>
-            amet consectetur adipisicing elit. Blanditiis, dolorum libero?
-            Obcaecati, laborum reiciendis dolorem voluptatum distinctio sed
-            tempore pariatur similique. At suscipit nesciunt autem praesentium
-            aspernatur, facilis earum fugiat ducimus nostrum dolore soluta nam
-            neque ratione, saepe ea tempora placeat iure? Non commodi
-            dignissimos et ad excepturi voluptatibus hic, optio tempore?
-            Laborum, dicta suscipit est culpa odio rerum doloribus?
+            החשש אמיתי הפעם": אחרי דוח פיץ', באוצר נערכים להגעת כלכלני מוד'יס על
+            רקע ההסבר כי הדוח האופטימי יחסית של חברת הדירוג פיץ' נבע מהערכה
+            שהחקיקה לא באמת תתממש, גורמים בכירים באוצר טוענים כי הדוח הבא של
+            חברת מודי'ס שיתפרסם באוקטובר "יכול להביא עמו החלטה קשה למשק". כלכלני
+            החברה, שכבר הורידה את תחזית הדירוג של ישראל באפריל האחרון, יגיעו
+            לישראל בקרוב
           </p>
         </div>
       </section>
       <section className={`${styles.section2} container d-flex`}>
         <div className="column text">
-          <h1>Lorem ipsum dolor, sit. </h1>
+          <h1>באוצר נערכים להגעת כלכלני מוד'יס על</h1>
           <p>
-            amet consectetur adipisicing elit. Blanditiis, dolorum libero?
-            Obcaecati, laborum reiciendis dolorem voluptatum distinctio sed
-            tempore pariatur similique. At suscipit nesciunt autem praesentium
-            aspernatur, facilis earum fugiat ducimus nostrum dolore soluta nam
-            neque ratione, saepe ea tempora placeat iure? Non commodi
-            dignissimos et ad excepturi voluptatibus hic, optio tempore?
-            Laborum, dicta suscipit est culpa odio rerum doloribus?
+            החשש אמיתי הפעם": אחרי דוח פיץ', באוצר נערכים להגעת כלכלני מוד'יס על
+            רקע ההסבר כי הדוח האופטימי יחסית של חברת הדירוג פיץ' נבע מהערכה
+            שהחקיקה לא באמת תתממש, גורמים בכירים באוצר טוענים כי הדוח הבא של
+            חברת מודי'ס שיתפרסם באוקטובר "יכול להביא עמו החלטה קשה למשק". כלכלני
+            החברה, שכבר הורידה את תחזית הדירוג של ישראל באפריל האחרון, יגיעו
+            לישראל בקרוב
           </p>
         </div>
         <img

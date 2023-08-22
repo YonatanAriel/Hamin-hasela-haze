@@ -1,0 +1,19 @@
+.column {
+  padding: 0;
+}
+.section1 {
+  background-color: var(--main-color-darker);
+  padding: 0;
+}
+.section1 .column {
+  padding: 0;
+}
+.section2 {
+  background-color: var(--main-color-dark);
+}
+.section3 {
+  background-color: var(--main-color-medium);
+}
+.section4 {
+  background-color: var(--main-color-light);
+}

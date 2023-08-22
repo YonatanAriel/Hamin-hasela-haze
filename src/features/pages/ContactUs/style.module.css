@@ -1,5 +1,35 @@
 .contactDetails {
   background-color: var(--main-color-medium);
   margin: auto 0;
-  height: 65vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* margin: 1.5rem; */
+}
+.contactDetails a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.contactDetails h1,
+.address h1 {
+  text-align: center;
+}
+.phoneNumber {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+.phoneNumber > div:first-child:active {
+  opacity: 0;
+}
+.address {
+  background-color: var(--main-color-dark);
+  min-width: 50%;
+  margin: 1rem auto;
+  align-items: center;
+}
+.address a {
+  color: white;
 }
