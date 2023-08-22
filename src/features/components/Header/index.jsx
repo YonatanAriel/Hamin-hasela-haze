@@ -68,15 +68,24 @@ function Header() {
             </NavLink>
           </li>
         </ul>
-        <img
-          className={styles.imgContainer}
-          src="public\assets\photos\logo.jpg"
-        ></img>
         <div
-          onClick={() => setShowLinks((prev) => !prev)}
-          className={styles.mobileOption}
+          style={{
+            width: screenWidth < 900 && "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
         >
-          <MobileOption />
+          <img
+            className={styles.imgContainer}
+            src="public\assets\photos\logo.jpg"
+          ></img>
+          <div
+            onClick={() => setShowLinks((prev) => !prev)}
+            className={styles.mobileOption}
+          >
+            <MobileOption />
+          </div>
         </div>
       </div>
     </>
