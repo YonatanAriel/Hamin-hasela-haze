@@ -1,0 +1,12 @@
+.section1 {
+  background-color: var(--main-color-light);
+}
+.section2 {
+  background-color: var(--main-color-medium);
+}
+.section3 {
+  background-color: var(--main-color-dark);
+}
+.section4 {
+  background-color: var(--main-color-darker);
+}

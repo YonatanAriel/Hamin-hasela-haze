@@ -1,8 +1,11 @@
 .headerContainer {
   background-color: var(--main-color-lighter);
   position: sticky;
+  z-index: 1;
   right: 0;
   left: 0;
+  top: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.3rem;

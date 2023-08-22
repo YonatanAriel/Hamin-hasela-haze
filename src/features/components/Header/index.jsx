@@ -18,7 +18,7 @@ function Header() {
   return (
     <>
       <div
-        className={`${styles.headerContainer} d-flex`}
+        className={`${styles.headerContainer} `}
         style={{
           flexDirection: showLinks && screenWidth < 900 && "column-reverse",
         }}
@@ -60,7 +60,7 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={() => setShowLinks((prev) => !prev)} to={"home"}>
+            <NavLink onClick={() => setShowLinks((prev) => !prev)} to={"/"}>
               {headerData.homeLink}
               <AiFillHome size={23} style={{ marginBottom: "4px" }} />
             </NavLink>
