@@ -11,8 +11,22 @@ function InTheArea() {
   return (
     <div
       className={` ${styles.inTheAreaContainer} pageContainer`}
-      style={{ paddingTop: "80dvh", zIndex: 0 }}
+      style={{ zIndex: 0 }}
     >
+      <h1
+        style={{
+          margin: "8dvh auto",
+          fontSize: "4rem",
+          color: "white",
+          maxWidth: "38%",
+          textAlign: "center",
+          textShadow: "black 1px 1px",
+          animation: "growAndFadeIn .7s linear ",
+        }}
+      >
+        גלו את מה שיש לאיזור להציע
+      </h1>
+
       {imgs?.map((img, i) => (
         <section
           key={img}

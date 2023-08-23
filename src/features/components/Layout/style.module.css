@@ -10,12 +10,3 @@
   object-fit: cover;
   object-position: center;
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}

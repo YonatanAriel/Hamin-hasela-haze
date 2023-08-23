@@ -26,7 +26,7 @@
 .select select {
   font-size: 0.9rem;
   font-weight: 600;
-  transition: background-color 1s ease-in;
+  transition: background-color 1s ease-in, color 1s ease-in;
   display: inline-block;
   width: 100%;
   cursor: pointer;
@@ -52,11 +52,10 @@
   /* #6d6875; */
 }
 .select select:disabled {
-  opacity: 0.5;
   pointer-events: none;
 }
 .select_arrow {
-  transition: color 1s ease-in;
+  transition: border-color 1s ease-in;
   position: absolute;
   top: 14px;
   right: 15px;
@@ -69,17 +68,17 @@
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-.select select:hover ~ .select_arrow,
-.select select:focus ~ .select_arrow {
-  /* border-color: #ffcdb2; */
+.select select:hover ~ .select_arrow
+/* .select select:focus ~ .select_arrow */ {
+  border-color: #ffcdb2;
 }
 .select select:disabled ~ .select_arrow {
-  /* border-top-color: #7b7b7b; */
+  border-top-color: #7b7b7b;
 }
 
 .select select:hover
-/* .select select:focus,
-.select select:active */ {
+/* .select select:focus, */
+/* .select select:active */ {
   color: #ffcdb2;
   background: #6d6875;
 }

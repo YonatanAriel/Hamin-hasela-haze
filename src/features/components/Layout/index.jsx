@@ -42,7 +42,13 @@ function Layout() {
 
   return (
     <>
-      <div style={{ position: "sticky", top: 0, zIndex: 1 }}>
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 1,
+        }}
+      >
         <Header />
         <LanguageButton />
       </div>
@@ -50,15 +56,11 @@ function Layout() {
         <img
           className={` ${styles.img} 
           `}
-          style={
-            {
-              // ${
-              //   // currentImageIndex !== 0 ? styles.fadeOut : ""
-              // }
-            }
-          }
+          style={{
+            animation: "fadeInUp 1s linear ",
+          }}
           src={imgs[currentImageIndex]}
-        />
+        ></img>
       )}
 
       <MainRoutes />

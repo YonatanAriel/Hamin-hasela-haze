@@ -3,11 +3,14 @@
   backdrop-filter: blur(30px);
 }
 .section2 {
-  background-color: var(--main-color-medium);
+  /* background-color: var(--main-color-medium); */
+  backdrop-filter: blur(30px);
 }
 .section3 {
-  background-color: var(--main-color-dark);
+  /* background-color: var(--main-color-dark); */
+  backdrop-filter: blur(30px);
 }
 .section4 {
-  background-color: var(--main-color-darker);
+  /* background-color: var(--main-color-darker); */
+  backdrop-filter: blur(30px);
 }
