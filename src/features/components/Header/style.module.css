@@ -11,6 +11,7 @@
   padding: 1.3rem;
   gap: 3rem;
   transform: all 3s ease;
+  /* opacity: 0.5; */
 }
 .headerContainer li {
   list-style-type: none;

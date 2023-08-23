@@ -9,9 +9,12 @@ function ContactUs() {
     (state) => state.language.languages[0].content.contactUs
   );
 
-  const handleCopy = () => {
+  const handleCopy = (numberOrAddress) => {
+    const textToCopy =
+      numberOrAddress === "number" ? data.phoneNumber : data.address;
+    console.log(textToCopy);
     try {
-      navigator.clipboard.writeText(data.phoneNumber);
+      navigator.clipboard.writeText(textToCopy);
     } catch (err) {}
   };
 
@@ -23,14 +26,13 @@ function ContactUs() {
         `}
         >
           <h1>{data.contactUs}</h1>
-          <a></a>
           <a href={`https://wa.me/${data.phoneNumber}`}>
             <AiOutlineWhatsApp size={50} />
           </a>
           <div className={styles.phoneNumber}>
-            <div onClick={handleCopy}>
+            <div onClick={() => handleCopy("number")}>
               <MdOutlineContentCopy
-                style={{ marginBottom: "-3px", cursor: "pointer" }}
+                style={{ marginBottom: "-2px", cursor: "pointer" }}
                 size={21}
               />
             </div>
@@ -45,8 +47,16 @@ function ContactUs() {
           <a href="https://waze.com/ul?ll=32.07164961988873,35.26690457134639&navigate=yes">
             <TbLocationFilled size={40} />
           </a>
+          <div className={styles.addressDetails}>
+            <div onClick={() => handleCopy("address")}>
+              <MdOutlineContentCopy
+                style={{ marginBottom: "-2px", cursor: "pointer" }}
+                size={21}
+              />
+            </div>
 
-          <a>{data.address}</a>
+            <a>{data.address}</a>
+          </div>
         </div>
       </div>
       <img

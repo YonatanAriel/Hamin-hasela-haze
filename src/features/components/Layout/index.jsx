@@ -3,6 +3,8 @@ import MainRoutes from "../../../Routes/MainRoutes";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changeScreenWidth } from "../../generalDataSlice";
+import Header from "../Header";
+import LanguageButton from "../LanguageButton";
 
 function Layout() {
   const dispatch = useDispatch();
@@ -19,7 +21,12 @@ function Layout() {
     };
   }, []);
 
-  return <MainRoutes />;
+  return (
+    <>
+      <Header />
+      <LanguageButton /> <MainRoutes />
+    </>
+  );
 }
 
 export default Layout;

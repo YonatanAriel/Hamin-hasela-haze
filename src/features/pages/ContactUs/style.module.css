@@ -2,6 +2,14 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  font-size: 1.3rem;
+}
+.detailsContainer svg {
+  transition: transform 0.5s ease-in-out;
+}
+.detailsContainer svg:hover,
+:focus {
+  transform: scale(1.05);
 }
 .contactDetails {
   background-color: var(--main-color-medium);
@@ -12,19 +20,20 @@
 .contactDetails a {
   color: white;
   text-decoration: none;
-  font-size: 1.4rem;
 }
 .contactDetails h1,
 .address h1 {
   text-align: center;
 }
-.phoneNumber {
+.phoneNumber,
+.addressDetails {
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
   align-items: center;
 }
-.phoneNumber > div:first-child:active {
+.phoneNumber > div:first-child:active,
+.addressDetails > div:first-child:active {
   opacity: 0;
 }
 .address {
