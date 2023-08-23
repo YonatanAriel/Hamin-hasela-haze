@@ -7,6 +7,7 @@ const English = {
   },
   home: {
     sections: {
+      title: "Everything you need to know about us",
       section1: {
         h1: "Economist Mody's Arrival",
         p: `The genuine concern this time: After the Pitz Report, the treasury is preparing for the arrival of Economist Mody on the backdrop of the explanation that the relatively optimistic Pitz credit rating report was the result of an assessment that the legislation will not really be implemented. Senior officials in the treasury argue that Mody's next report, to be published in October, "could bring a tough decision to the economy." Mody's economists, who already lowered Israel's rating forecast last April, will be coming to Israel soon.`,
@@ -27,6 +28,7 @@ const English = {
   },
   inTheArea: {
     sections: {
+      title: "Discover what the area has to offer",
       section1: {
         h1: "Spring of Heroism",
         p: `The genuine concern this time: After the Pitz Report, the treasury is preparing for the arrival of Economist Mody on the backdrop of the explanation that the relatively optimistic Pitz credit rating report was the result of an assessment that the legislation will not really be implemented. Senior officials in the treasury argue that Mody's next report, to be published in October, "could bring a tough decision to the economy." Mody's economists, who already lowered Israel's rating forecast last April, will be coming to Israel soon.`,

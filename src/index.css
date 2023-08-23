@@ -68,6 +68,15 @@ button:focus-visible {
 .d-flex {
   display: flex;
 }
+.pageTitle {
+  margin: 8dvh auto;
+  font-size: 4rem;
+  color: white;
+  max-width: 38%;
+  text-align: center;
+  text-shadow: black 1px 1px;
+  animation: growAndFadeIn 0.7s linear;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

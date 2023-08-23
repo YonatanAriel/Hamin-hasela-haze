@@ -14,10 +14,22 @@ export const imgsSrc = {
     "public/assets/photos/1667117763.9590.jpg",
     "public/assets/photos/1685511210.5261.jpg",
   ],
+  inTheAreaBackgroundImgs: [
+    "public/assets/photos/1685511210.5261.jpg",
+    "public/assets/photos/1611476252.9026.jpg",
+    "public/assets/photos/1611476291.1757.jpg",
+    "public/assets/photos/20211128_163212-01-scaled.jpeg",
+    "public/assets/photos/1611476283.5161.jpg",
+  ],
   homeImgs: [
     "public/assets/photos/35473270_1812671648829864_6670125652827439104_n.jpg",
     "public/assets/photos/35644350_1814005412029821_9138680564587429888_n.jpg",
     "public/assets/photos/unnamed (1).jpg",
     "public/assets/photos/WhatsApp Image 2018-06-13 at 09.02.13 (1).jpeg",
+  ],
+  homeBackgroundImgs: [
+    "public/assets/photos/20210617_074705-01-1-scaled.jpeg",
+    "public/assets/photos/IMG_20191204_043953_653-scaled.jpg",
+    "public/assets/photos/WhatsApp-Image-2022-01-23-at-4.55.49-PM-1-e1643193600313.jpeg",
   ],
 };

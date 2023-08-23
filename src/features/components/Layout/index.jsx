@@ -1,6 +1,6 @@
 import MainRoutes from "../../../Routes/MainRoutes";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { changeScreenWidth } from "../../generalDataSlice";
 import Header from "../Header";
 import LanguageButton from "../LanguageButton";
@@ -8,8 +8,15 @@ import styles from "./style.module.css";
 import { useLocation } from "react-router-dom";
 
 function Layout() {
+  const location = useLocation().pathname;
   const dispatch = useDispatch();
-
+  const backgroundImgs = useSelector((state) =>
+    location === "/"
+      ? state.generalData.imgs.homeBackgroundImgs
+      : location === "/inTheArea"
+      ? state.generalData.imgs.inTheAreaBackgroundImgs
+      : []
+  );
   useEffect(() => {
     const handleResize = () => {
       dispatch(changeScreenWidth(window.innerWidth));
@@ -23,22 +30,21 @@ function Layout() {
   }, []);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const imgs = [
-    "public/assets/photos/35651012_1822120771218285_4799163986597642240_n.jpg",
-    "public/assets/photos/1667117763.9590.jpg",
-    "public/assets/photos/1685511210.5261.jpg",
-    "public/assets/photos/WhatsApp-Image-2022-01-23-at-4.55.49-PM-1-e1643193600313.jpeg",
-  ];
-  const [animation, setAnimation] = useState(false);
+  // const imgs = [
+  //   "public/assets/photos/35651012_1822120771218285_4799163986597642240_n.jpg",
+  //   "public/assets/photos/1667117763.9590.jpg",
+  //   "public/assets/photos/1685511210.5261.jpg",
+  //   "public/assets/photos/WhatsApp-Image-2022-01-23-at-4.55.49-PM-1-e1643193600313.jpeg",
+  // ];
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imgs.length);
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % backgroundImgs?.length
+      );
     }, 4000);
 
     return () => clearInterval(interval);
   }, []);
-
-  const location = useLocation();
 
   return (
     <>
@@ -52,14 +58,14 @@ function Layout() {
         <Header />
         <LanguageButton />
       </div>
-      {["/inTheArea", "/"].includes(location.pathname) && (
+      {["/inTheArea", "/"].includes(location) && (
         <img
-          className={` ${styles.img} 
+          className={` ${styles.img}
           `}
           style={{
-            animation: "fadeInUp 1s linear ",
+            animation: "fadeInUp 0.7s linear ",
           }}
-          src={imgs[currentImageIndex]}
+          src={backgroundImgs[currentImageIndex]}
         ></img>
       )}
 

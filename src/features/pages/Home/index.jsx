@@ -6,21 +6,10 @@ function Home() {
   const sectionsData = useSelector(
     (state) => state?.language?.language?.home?.sections
   );
+
   return (
     <div className="pageContainer">
-      <h1
-        style={{
-          margin: "8dvh auto",
-          fontSize: "4rem",
-          color: "white",
-          maxWidth: "38%",
-          textAlign: "center",
-          textShadow: "black 1px 1px",
-          animation: "growAndFadeIn .7s linear ",
-        }}
-      >
-        כל מה שתצטרכו לדעת עלינו
-      </h1>
+      <h1 className={"pageTitle"}>{sectionsData.title}</h1>
       {imgs?.map((img, i) => (
         <section
           key={img + 1}
