@@ -52,7 +52,7 @@ button:focus-visible {
 }
 .text {
   padding: 3rem;
-  text-align: right;
+  /* text-align: right; */
   display: flex;
   flex-direction: column;
   gap: 1em;

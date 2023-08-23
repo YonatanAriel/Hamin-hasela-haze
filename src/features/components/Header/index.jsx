@@ -12,19 +12,29 @@ function Header() {
   const [showLinks, setShowLinks] = useState(false);
   const headerData = useSelector((state) => state?.language?.language?.header);
   const screenWidth = useSelector((state) => state?.generalData?.screenWidth);
+  const currentLanguage = useSelector(
+    (state) => state?.language?.currentLanguage
+  );
 
   return (
     <>
       <div
         className={`${styles.headerContainer} `}
         style={{
-          flexDirection: showLinks && screenWidth < 900 && "column-reverse",
+          flexDirection:
+            showLinks && screenWidth < 900
+              ? "column-reverse"
+              : currentLanguage === "English" && "row-reverse",
         }}
       >
         <ul
           className={`${styles.linksContainer}`}
           style={{
             display: showLinks && "flex",
+            flexDirection:
+              currentLanguage === "English" &&
+              screenWidth > 900 &&
+              "row-reverse",
           }}
         >
           <li>
@@ -35,8 +45,9 @@ function Header() {
               }
               onClick={() => setShowLinks((prev) => !prev)}
             >
+              {currentLanguage === "English" && <FaPhoneAlt size={20} />}
               {headerData?.ContactUsLink}
-              <FaPhoneAlt size={20} />
+              {currentLanguage === "Hebrew" && <FaPhoneAlt size={20} />}
             </NavLink>
           </li>
           <li>
@@ -47,8 +58,9 @@ function Header() {
               }
               onClick={() => setShowLinks((prev) => !prev)}
             >
+              {currentLanguage === "English" && <PiMountainsFill size={23} />}
               {headerData?.InTheAreaLink}
-              <PiMountainsFill size={23} />
+              {currentLanguage === "Hebrew" && <PiMountainsFill size={23} />}
             </NavLink>
           </li>
           <li>
@@ -56,13 +68,20 @@ function Header() {
               onClick={() => setShowLinks((prev) => !prev)}
               to={"gallery"}
             >
-              {headerData?.galleryLink} <BiSolidImageAlt size={23} />
+              {currentLanguage === "English" && <BiSolidImageAlt size={23} />}
+              {headerData?.galleryLink}
+              {currentLanguage === "Hebrew" && <BiSolidImageAlt size={23} />}
             </NavLink>
           </li>
           <li>
             <NavLink onClick={() => setShowLinks((prev) => !prev)} to={"/"}>
+              {currentLanguage === "English" && (
+                <AiFillHome size={23} style={{ marginBottom: "4px" }} />
+              )}
               {headerData?.homeLink}
-              <AiFillHome size={23} style={{ marginBottom: "4px" }} />
+              {currentLanguage === "Hebrew" && (
+                <AiFillHome size={23} style={{ marginBottom: "4px" }} />
+              )}
             </NavLink>
           </li>
         </ul>

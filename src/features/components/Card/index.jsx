@@ -2,6 +2,9 @@ import { useSelector } from "react-redux";
 
 function Card({ padding0, h1, p, imgSrc, index }) {
   const screenWidth = useSelector((state) => state.generalData.screenWidth);
+  const currentLanguage = useSelector(
+    (state) => state.language.currentLanguage
+  );
 
   return (
     <>
@@ -15,7 +18,10 @@ function Card({ padding0, h1, p, imgSrc, index }) {
       ) : (
         ""
       )}
-      <div className="column text">
+      <div
+        className="column text"
+        style={{ textAlign: currentLanguage === "Hebrew" ? "right" : "left" }}
+      >
         <h1>{h1}</h1>
         <p>{p}</p>
       </div>
