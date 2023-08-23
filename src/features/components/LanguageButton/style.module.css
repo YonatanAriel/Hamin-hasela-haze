@@ -22,6 +22,7 @@
   width: 100%;
 }
 .select select {
+  transition: background-color 1s ease-in;
   display: inline-block;
   width: 100%;
   cursor: pointer;
@@ -49,6 +50,7 @@
   pointer-events: none;
 }
 .select_arrow {
+  transition: color 1s ease-in;
   position: absolute;
   top: 24px;
   right: 15px;

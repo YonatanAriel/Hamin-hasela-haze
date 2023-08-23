@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import styles from "./style.module.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MobileOption from "../mobileOption";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidImageAlt } from "react-icons/bi";
 import { PiMountainsFill } from "react-icons/pi";
@@ -10,11 +10,17 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 function Header() {
   const [showLinks, setShowLinks] = useState(false);
+  const [isImgSpinning, setIsImgSpinning] = useState(false);
   const headerData = useSelector((state) => state?.language?.language?.header);
   const screenWidth = useSelector((state) => state?.generalData?.screenWidth);
   const currentLanguage = useSelector(
     (state) => state?.language?.currentLanguage
   );
+
+  const handleImgAnimation = () => {
+    setIsImgSpinning(true);
+    setTimeout(() => setIsImgSpinning(false), 2000);
+  };
 
   return (
     <>
@@ -38,43 +44,34 @@ function Header() {
           }}
         >
           <li>
-            <NavLink
+            <Link
               to={"/contactUs"}
-              className={({ isActive, isPending }) =>
-                isPending ? "" : isActive ? styles.navLinkActive : ""
-              }
               onClick={() => setShowLinks((prev) => !prev)}
             >
               {currentLanguage === "English" && <FaPhoneAlt size={20} />}
               {headerData?.ContactUsLink}
               {currentLanguage === "Hebrew" && <FaPhoneAlt size={20} />}
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
+            <Link
               to={"inTheArea"}
-              className={({ isActive }) =>
-                isActive ? styles.navLinkActive : undefined
-              }
               onClick={() => setShowLinks((prev) => !prev)}
             >
               {currentLanguage === "English" && <PiMountainsFill size={23} />}
               {headerData?.InTheAreaLink}
               {currentLanguage === "Hebrew" && <PiMountainsFill size={23} />}
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
-              onClick={() => setShowLinks((prev) => !prev)}
-              to={"gallery"}
-            >
+            <Link onClick={() => setShowLinks((prev) => !prev)} to={"gallery"}>
               {currentLanguage === "English" && <BiSolidImageAlt size={23} />}
               {headerData?.galleryLink}
               {currentLanguage === "Hebrew" && <BiSolidImageAlt size={23} />}
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink onClick={() => setShowLinks((prev) => !prev)} to={"/"}>
+            <Link onClick={() => setShowLinks((prev) => !prev)} to={"/"}>
               {currentLanguage === "English" && (
                 <AiFillHome size={23} style={{ marginBottom: "4px" }} />
               )}
@@ -82,7 +79,7 @@ function Header() {
               {currentLanguage === "Hebrew" && (
                 <AiFillHome size={23} style={{ marginBottom: "4px" }} />
               )}
-            </NavLink>
+            </Link>
           </li>
         </ul>
         <div
@@ -94,8 +91,11 @@ function Header() {
           }}
         >
           <img
-            className={styles.imgContainer}
+            className={`${styles.imgContainer} ${
+              isImgSpinning ? styles.spin : ""
+            }`}
             src="public\assets\photos\logo.jpg"
+            onClick={handleImgAnimation}
           ></img>
           <div
             onClick={() => setShowLinks((prev) => !prev)}

@@ -19,13 +19,13 @@
   width: 100px;
   height: 100px;
   border-radius: 100px;
+  cursor: pointer;
 }
 .linksContainer {
   justify-content: center;
   align-items: center;
   gap: 3rem;
   display: flex;
-  animation: slowEntry 3s ease;
 }
 .imgContainer {
   align-self: flex-start;
@@ -40,16 +40,34 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  transition: all 0.5s ease-in;
 }
 .headerContainer a:hover,
 :focus {
-  opacity: 0.6;
+  opacity: 0.8;
+  color: black;
+  transform: scaleY(1.1);
 }
 .mobileOption {
   display: none;
   color: var(--main-color-darker);
   margin-left: auto;
 }
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.spin {
+  animation: spin 2s linear;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 900px) {
   .imgContainer {
     align-self: unset;
