@@ -2,9 +2,14 @@ import { useSelector } from "react-redux";
 import styles from "./style.module.css";
 
 function Gallery() {
-  const imgs = useSelector((state) => state.generalData.imgs.galleryImgs);
+  const imgs = useSelector((state) => state?.generalData?.imgs?.galleryImgs);
   return (
     <ul className={` ${styles.galleryContainer} pageContainer`}>
+      {imgs?.map((imgSrc) => (
+        <li key={imgSrc}>
+          <img src={imgSrc} alt="a guest house" />
+        </li>
+      ))}
       <li className={` d-flex`}>
         <img
           className="column"
@@ -17,11 +22,6 @@ function Gallery() {
           alt=""
         />
       </li>
-      {imgs.map((imgSrc) => (
-        <li>
-          <img src={imgSrc} alt="a guest house" />
-        </li>
-      ))}
     </ul>
   );
 }

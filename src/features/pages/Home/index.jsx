@@ -1,20 +1,22 @@
+import { useEffect } from "react";
 import Card from "../../components/Card";
 import styles from "./style.module.css";
 import { useSelector } from "react-redux";
 function Home() {
-  const imgs = useSelector((state) => state.generalData.imgs.homeImgs);
+  const imgs = useSelector((state) => state?.generalData?.imgs?.homeImgs);
   const sectionsData = useSelector(
-    (state) => state.language.languages[0].content.home.sections
+    (state) => state?.language?.language?.home?.sections
   );
-
   return (
     <div className="pageContainer">
-      {imgs.map((img, i) => (
-        <section className={`${styles[`section${i + 1}`]} container d-flex`}>
+      {imgs?.map((img, i) => (
+        <section
+          key={img + 1}
+          className={`${styles[`section${i + 1}`]} container d-flex`}
+        >
           <Card
-            key={img}
-            h1={sectionsData[`section${i + 1}`].h1}
-            p={sectionsData[`section${i + 1}`].p}
+            h1={sectionsData[`section${i + 1}`]?.h1}
+            p={sectionsData[`section${i + 1}`]?.p}
             imgSrc={img}
             index={i}
           />

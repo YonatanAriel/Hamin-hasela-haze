@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: center;
   color: var(--main-color-lighter);
-  /* flex-direction: column; */
   gap: 0.3rem;
   padding: 0.5rem;
 }
@@ -68,4 +67,11 @@
 }
 .select select:disabled ~ .select_arrow {
   border-top-color: #7b7b7b;
+}
+
+.select select:hover,
+.select select:focus,
+.select select:active {
+  color: #ffcdb2;
+  background: #6d6875;
 }

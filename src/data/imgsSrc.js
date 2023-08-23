@@ -17,7 +17,7 @@ export const imgsSrc = {
   homeImgs: [
     "public/assets/photos/35473270_1812671648829864_6670125652827439104_n.jpg",
     "public/assets/photos/35644350_1814005412029821_9138680564587429888_n.jpg",
-    "public/assets/photos/35644350_1814005412029821_9138680564587429888_n.jpg",
+    "public/assets/photos/unnamed (1).jpg",
     "public/assets/photos/WhatsApp Image 2018-06-13 at 09.02.13 (1).jpeg",
   ],
 };

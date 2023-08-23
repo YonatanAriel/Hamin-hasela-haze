@@ -9,9 +9,9 @@ function MainRoutes() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="gallery" element={<Gallery />} />
         <Route path="inTheArea" element={<InTheArea />} />
         <Route path="contactUs" element={<ContactUs />} />
+        <Route path="gallery" element={<Gallery />} />
       </Routes>
     </>
   );

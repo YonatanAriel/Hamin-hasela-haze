@@ -23,8 +23,11 @@ function Layout() {
 
   return (
     <>
-      <Header />
-      <LanguageButton /> <MainRoutes />
+      <div style={{ position: "sticky", top: 0 }}>
+        <Header />
+        <LanguageButton />
+      </div>
+      <MainRoutes />
     </>
   );
 }
