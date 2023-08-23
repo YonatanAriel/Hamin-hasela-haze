@@ -1,5 +1,6 @@
 .section1 {
-  background-color: var(--main-color-light);
+  /* background-color: var(--main-color-light); */
+  backdrop-filter: blur(30px);
 }
 .section2 {
   background-color: var(--main-color-medium);

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Card from "../../components/Card";
 import styles from "./style.module.css";
 import { useSelector } from "react-redux";
@@ -13,6 +12,7 @@ function Home() {
         <section
           key={img + 1}
           className={`${styles[`section${i + 1}`]} container d-flex`}
+          style={{ borderRadius: "3px" }}
         >
           <Card
             h1={sectionsData[`section${i + 1}`]?.h1}

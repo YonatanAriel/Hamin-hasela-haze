@@ -1,0 +1,21 @@
+.img {
+  animation: fadeIn 1s ease-in-out;
+  opacity: 1;
+  z-index: -1;
+  position: fixed;
+  top: 0px;
+  width: 100dvw;
+  min-height: calc(100vh + 45px);
+  bottom: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -9,13 +9,17 @@ function InTheArea() {
   );
 
   return (
-    <div className={` ${styles.inTheAreaContainer} pageContainer`}>
+    <div
+      className={` ${styles.inTheAreaContainer} pageContainer`}
+      style={{ paddingTop: "80dvh", zIndex: 0 }}
+    >
       {imgs?.map((img, i) => (
         <section
           key={img}
           className={`${styles[`section${i + 1}`]} container d-flex`}
         >
           <Card
+            opacity={true}
             padding0={true}
             h1={sectionsData[`section${i + 1}`]?.h1}
             p={sectionsData[`section${i + 1}`]?.p}

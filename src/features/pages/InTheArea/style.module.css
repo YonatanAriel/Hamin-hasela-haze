@@ -2,18 +2,25 @@
   padding: 0;
 }
 .section1 {
-  background-color: var(--main-color-darker);
+  /* background-color: var(--main-color-darker); */
+  backdrop-filter: blur(50px);
   padding: 0;
 }
 .section1 .column {
   padding: 0;
 }
 .section2 {
-  background-color: var(--main-color-dark);
+  backdrop-filter: blur(50px);
+
+  /* background-color: var(--main-color-dark); */
 }
 .section3 {
-  background-color: var(--main-color-medium);
+  backdrop-filter: blur(50px);
+
+  /* background-color: var(--main-color-medium); */
 }
 .section4 {
-  background-color: var(--main-color-light);
+  backdrop-filter: blur(50px);
+
+  /* background-color: var(--main-color-light); */
 }

@@ -1,37 +1,42 @@
 .languageContainer {
   position: sticky;
   left: 0px;
-  top: 0;
+  top: 0px;
   width: 130px;
   height: 45px;
-  background-color: var(--main-color-darker);
+  /* background-color: var(--main-color-darker); */
+  background-color: rgba(0, 0, 0, 0.088);
+
+  backdrop-filter: blur(100px);
   border-radius: 0 0 12px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--main-color-lighter);
+  color: var(--main-color-light);
   gap: 0.3rem;
+  z-index: 1;
   padding: 0.5rem;
 }
 
 .select {
-  font-size: 1.9rem;
   position: relative;
   display: inline-block;
-  margin-bottom: 12px;
   width: 100%;
 }
 .select select {
+  font-size: 0.9rem;
+  font-weight: 600;
   transition: background-color 1s ease-in;
   display: inline-block;
   width: 100%;
   cursor: pointer;
-  padding: 10px 15px 10px 8px;
+  padding: 10px 15px 10px 5px;
   outline: 0;
   border: 0px solid #000000;
   border-radius: 12px;
   background: #ffcdb2;
-  color: rgb(109, 104, 117);
+  color: var(--main-color-darker);
+  /* rgb(109, 104, 117); */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -40,10 +45,11 @@
 .select select::-ms-expand {
   display: none;
 }
-.select select:hover,
-.select select:focus {
+.select select:hover
+/* .select select:focus  */ {
   color: #ffcdb2;
-  background: #6d6875;
+  background: var(--main-color-medium);
+  /* #6d6875; */
 }
 .select select:disabled {
   opacity: 0.5;
@@ -52,7 +58,7 @@
 .select_arrow {
   transition: color 1s ease-in;
   position: absolute;
-  top: 24px;
+  top: 14px;
   right: 15px;
   width: 0px;
   height: 0px;
@@ -65,15 +71,15 @@
 }
 .select select:hover ~ .select_arrow,
 .select select:focus ~ .select_arrow {
-  border-color: #ffcdb2;
+  /* border-color: #ffcdb2; */
 }
 .select select:disabled ~ .select_arrow {
-  border-top-color: #7b7b7b;
+  /* border-top-color: #7b7b7b; */
 }
 
-.select select:hover,
-.select select:focus,
-.select select:active {
+.select select:hover
+/* .select select:focus,
+.select select:active */ {
   color: #ffcdb2;
   background: #6d6875;
 }
