@@ -94,11 +94,11 @@ function ContactUs() {
       </div>
       <div>
         <div
-          className={`${styles.detailsContainer}
+          className={`${styles.detailsContainer} d-flex
          `}
         >
           <div
-            className={`${styles.contactDetails}  text d-flex 
+            className={`${styles.contactDetails}  text d-flex  column
         `}
           >
             <h1>{data.contactUs}</h1>
@@ -116,7 +116,7 @@ function ContactUs() {
             </div>
           </div>
           <div
-            className={`${styles.address}   text d-flex 
+            className={`${styles.address}   text d-flex column
         `}
           >
             <h1>{data?.ourAddress}</h1>

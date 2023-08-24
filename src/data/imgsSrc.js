@@ -19,7 +19,7 @@ export const imgsSrc = {
     "public/assets/photos/1611476252.9026.jpg",
     "public/assets/photos/1611476291.1757.jpg",
     "public/assets/photos/20211128_163212-01-scaled.jpeg",
-    "public/assets/photos/1611476283.5161.jpg",
+    // "public/assets/photos/1611476283.5161.jpg",
   ],
   homeImgs: [
     "public/assets/photos/35473270_1812671648829864_6670125652827439104_n.jpg",

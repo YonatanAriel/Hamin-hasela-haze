@@ -32,13 +32,15 @@ function Layout() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % backgroundImgs?.length
-      );
+      if (["/", "/inTheArea"].includes(location)) {
+        setCurrentImageIndex(
+          (prevIndex) => (prevIndex + 1) % backgroundImgs?.length
+        );
+      }
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [backgroundImgs.length]);
 
   return (
     <>

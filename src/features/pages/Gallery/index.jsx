@@ -1,16 +1,35 @@
 import { useSelector } from "react-redux";
 import styles from "./style.module.css";
+import { useState } from "react";
 
 function Gallery() {
   const imgs = useSelector((state) => state?.generalData?.imgs?.galleryImgs);
+  const [showFullImg, setShowFullImg] = useState({ show: false, imgSrc: "" });
   return (
-    <ul className={` ${styles.galleryContainer} pageContainer`}>
-      {imgs?.map((imgSrc) => (
-        <li key={imgSrc}>
-          <img src={imgSrc} alt="a guest house" />
-        </li>
-      ))}
-      {/* <li className={` d-flex`}>
+    <>
+      <img className={styles.backgroundImg} src={imgs[0]} />
+      <ul className={` ${styles.galleryContainer} `}>
+        {/* pageContainer */}
+        {imgs?.map((imgSrc) => (
+          <li
+            key={imgSrc}
+            style={{
+              display:
+                showFullImg.show && showFullImg.imgSrc !== imgSrc ? "none" : "",
+            }}
+            onClick={() =>
+              setShowFullImg((prev) => ({ show: !prev.show, imgSrc }))
+            }
+            className={
+              showFullImg.show && showFullImg.imgSrc === imgSrc
+                ? styles.bigImg
+                : ""
+            }
+          >
+            <img src={imgSrc} alt="an image" />
+          </li>
+        ))}
+        {/* <li className={` d-flex`}>
         <img
           className="column"
           src="public/assets/photos/unnamed.jpg"
@@ -22,7 +41,8 @@ function Gallery() {
           alt=""
         />
       </li> */}
-    </ul>
+      </ul>
+    </>
   );
 }
 
