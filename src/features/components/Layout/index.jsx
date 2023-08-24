@@ -53,6 +53,9 @@ function Layout() {
           position: "sticky",
           top: 0,
           zIndex: 1,
+          right: 0,
+          left: 0,
+          // minWidth: "100dvw",
         }}
       >
         <Header />

@@ -10,7 +10,7 @@ function Gallery() {
           <img src={imgSrc} alt="a guest house" />
         </li>
       ))}
-      <li className={` d-flex`}>
+      {/* <li className={` d-flex`}>
         <img
           className="column"
           src="public/assets/photos/unnamed.jpg"
@@ -21,7 +21,7 @@ function Gallery() {
           src="public/assets/photos/WhatsApp Image 2018-06-13 at 09.02.12.jpeg"
           alt=""
         />
-      </li>
+      </li> */}
     </ul>
   );
 }

@@ -32,6 +32,12 @@
 .imgContainer {
   align-self: flex-start;
   border: 2.5px solid var(--main-color-dark);
+  transition: all 500ms ease-out;
+}
+.imgContainer:hover,
+:focus {
+  border-color: var(--main-color-lighter);
+  transform: scale(1.03);
 }
 .headerContainer a {
   text-decoration: none;

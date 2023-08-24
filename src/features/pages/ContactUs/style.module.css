@@ -1,8 +1,36 @@
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background img {
+  margin-top: auto;
+  height: calc(100% - 100px);
+  object-fit: cover;
+  object-position: center;
+}
+.logoImg {
+  /* max-width: 40%; */
+  max-height: 50vh;
+  margin: auto;
+  transform: translateY(70px);
+}
 .detailsContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
   font-size: 1.3rem;
+  max-width: 30dvw;
+  margin: 0 auto;
+  padding: 3rem 0;
+  min-width: min(400px, 95vw);
 }
 .detailsContainer svg {
   transition: transform 0.5s ease-in-out;
@@ -11,16 +39,31 @@
 :focus {
   transform: scale(1.05);
 }
+
 .contactDetails {
-  background-color: var(--main-color-medium);
+  /* background-color: var(--main-color-medium); */
+  -webkit-box-shadow: 4px 6px 20px -4px rgba(0, 0, 0, 0.86);
+  -moz-box-shadow: 4px 6px 20px -4px rgba(0, 0, 0, 0.86);
+  box-shadow: 4px 6px 20px -4px rgba(0, 0, 0, 0.86);
+
+  backdrop-filter: blur(13px);
   align-items: center;
   text-align: center;
   justify-content: center;
 }
-.contactDetails a {
-  color: white;
-  text-decoration: none;
+.detailsContainer h1 {
+  color: var(--main-color-darker);
 }
+.detailsContainer a,
+.detailsContainer svg {
+  /* color: white; */
+  text-decoration: none;
+  color: var(--main-color-light);
+  text-shadow: black 0.5px 0.5px 0.5px;
+}
+/* .detailsContainer svg {
+  color: var(--main-color-light);
+} */
 .contactDetails h1,
 .address h1 {
   text-align: center;
@@ -37,11 +80,15 @@
   opacity: 0;
 }
 .address {
-  background-color: var(--main-color-dark);
+  /* background-color: var(--main-color-dark); */
+  backdrop-filter: blur(13px);
+  -webkit-box-shadow: 4px 6px 20px -4px rgba(0, 0, 0, 0.86);
+  -moz-box-shadow: 4px 6px 20px -4px rgba(0, 0, 0, 0.86);
+  box-shadow: 4px 6px 20px -4px rgba(0, 0, 0, 0.86);
   min-width: 50%;
   align-items: center;
   text-align: center;
 }
 .address a {
-  color: white;
+  /* color: white; */
 }

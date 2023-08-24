@@ -36,7 +36,8 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
+  padding-bottom: 3rem;
   gap: 3rem;
   width: 100%;
 }
@@ -112,6 +113,9 @@ button:focus-visible {
   }
   .column {
     max-width: 100%;
+  }
+  .pageTitle {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 500px) {

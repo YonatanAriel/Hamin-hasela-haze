@@ -1,6 +1,18 @@
+.galleryContainer {
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -3; */
+  transform: translateY(-100px);
+}
 .galleryContainer li {
   max-width: 80%;
   margin: 0 auto;
+  max-height: calc(100dvh);
+}
+.galleryContainer img {
+  border-radius: 4px;
 }
 .imgsFlex {
   /* flex-shrink: 1; */

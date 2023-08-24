@@ -71,10 +71,18 @@ function Card({ padding0, h1, p, imgSrc, index }) {
     (state) => state.language.currentLanguage
   );
   const location = useLocation().pathname;
-
   const [isVisible, setIsVisible] = useState(false);
   const imgRef = useRef(null);
   const textRef = useRef(null);
+  const imgStyle = {
+    padding: padding0 && 0,
+    borderRadius: location === "/" && "27px",
+    maxHeight: screenWidth > 900 && "70dvh",
+    objectFit: "cover",
+    objectPosition: "center",
+    opacity: isVisible ? 1 : 0,
+    transition: "opacity 1.5s ease-in-out",
+  };
 
   const handleIntersection = (entries) => {
     if (entries[0].isIntersecting) {
@@ -114,15 +122,7 @@ function Card({ padding0, h1, p, imgSrc, index }) {
           src={imgSrc}
           alt="img"
           className="column"
-          style={{
-            padding: padding0 && 0,
-            borderRadius: location === "/" && "27px",
-            maxHeight: screenWidth > 900 && "70dvh",
-            objectFit: "cover",
-            objectPosition: "center",
-            opacity: isVisible ? 1 : 0,
-            transition: "opacity 1s ease-in-out",
-          }}
+          style={imgStyle}
         />
       ) : (
         ""
@@ -144,15 +144,7 @@ function Card({ padding0, h1, p, imgSrc, index }) {
           src={imgSrc}
           alt=""
           className="column"
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-            maxHeight: screenWidth > 900 && "70dvh",
-            padding: padding0 && 0,
-            borderRadius: location === "/" && "27px",
-            opacity: isVisible ? 1 : 0,
-            transition: "opacity 1s ease-in-out",
-          }}
+          style={imgStyle}
         />
       ) : (
         ""
