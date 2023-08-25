@@ -18,6 +18,7 @@ function Layout() {
       ? state.generalData.imgs.inTheAreaBackgroundImgs
       : []
   );
+
   useEffect(() => {
     const handleResize = () => {
       dispatch(changeScreenWidth(window.innerWidth));

@@ -72,12 +72,22 @@ button:focus-visible {
 .pageTitle {
   margin: 8dvh auto;
   font-size: 4rem;
-  color: white;
+  /* color: rgba(255, 255, 255, 0.025); */
+  /* backdrop-filter: blur(50px); */
+  /* color: transparent; */
   max-width: 38%;
   text-align: center;
-  text-shadow: black 1px 1px;
+  color: white;
+  /* text-shadow: black 1px 1px; */
   animation: growAndFadeIn 0.7s linear;
+  /* backdrop-filter: blur(10px); / */
+  /* border-radius: 12px;
+  color: rgba(255, 255, 255, 0.714); */
+  color: #ffffff;
+  /* background: #ffffff; */
+  text-shadow: 1px 3px 0 #969696, -1px 0px 50px #aba8a8;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -88,7 +98,7 @@ button:focus-visible {
 }
 @keyframes fadeInUp {
   from {
-    opacity: 0;
+    opacity: 0.3;
     transform: translateY(40px);
   }
   to {

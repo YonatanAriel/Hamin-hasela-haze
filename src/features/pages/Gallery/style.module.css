@@ -8,6 +8,7 @@
   width: 100dvw;
   object-fit: cover;
   background-position: center;
+  animation: fadeInUp 0.6s ease;
 }
 .galleryContainer {
   position: sticky;
@@ -19,13 +20,15 @@
   overflow-y: auto;
   border-radius: 12px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
-  backdrop-filter: blur(25px);
-  border: 18px rgba(0, 0, 0, 0.088) solid;
+  backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.188);
+  /* border: 18px rgba(0, 0, 0, 0.088) solid; */
   flex-wrap: wrap;
   padding: 1rem;
+  animation: fadeIn 3s linear;
 }
 .galleryContainer li {
   /* margin: 0 auto; */
@@ -42,6 +45,7 @@
   object-fit: cover;
   background-position: center;
   transition: none;
+  cursor: pointer;
 }
 .bigImg {
   width: 100%;
