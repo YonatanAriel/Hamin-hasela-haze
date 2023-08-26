@@ -31,9 +31,22 @@ function Layout() {
     };
   }, []);
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (["/", "/inTheArea"].includes(location)) {
+  //       setCurrentImageIndex(
+  //         (prevIndex) => (prevIndex + 1) % backgroundImgs?.length
+  //       );
+  //     }
+  //   }, 4000);
+
+  //   return () => clearInterval(interval);
+  // }, [backgroundImgs.length]);
   useEffect(() => {
     const interval = setInterval(() => {
-      if (["/", "/inTheArea"].includes(location)) {
+      if (!["/", "/inTheArea"].includes(location)) {
+        clearInterval(interval);
+      } else {
         setCurrentImageIndex(
           (prevIndex) => (prevIndex + 1) % backgroundImgs?.length
         );
