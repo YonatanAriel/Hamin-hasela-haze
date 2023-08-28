@@ -1,3 +1,12 @@
+.navBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: min(300px, 20vmin);
+  width: 100dvw;
+  background: linear-gradient(to bottom, rgb(170, 206, 249), rgb(30, 29, 29));
+  z-index: -1;
+}
 .background {
   position: fixed;
   z-index: -1;

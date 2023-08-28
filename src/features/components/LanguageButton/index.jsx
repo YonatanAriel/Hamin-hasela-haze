@@ -16,7 +16,7 @@ function LanguageButton() {
     []
   );
   const dispatch = useDispatch();
-  const optionsCondition =
+  const condition =
     LsLanguage === "English" ||
     (userPreferredLanguage === "en" && LsLanguage !== "Hebrew");
 
@@ -55,7 +55,7 @@ function LanguageButton() {
         <IoLanguage size={30} />
         <div className={styles.select}>
           <select onChange={switchLanguage}>
-            {optionsCondition ? (
+            {condition ? (
               <>
                 <option value={"English"} name={"English"}>
                   {"English"}

@@ -15,7 +15,12 @@
   --main-color-light: rgb(255, 180, 162);
   --main-color-lighter: rgb(255, 205, 178);
 }
-
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +41,6 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* padding: 3rem 0; */
   padding-bottom: 3rem;
   gap: 3rem;
   width: 100%;
@@ -72,19 +76,11 @@ button:focus-visible {
 .pageTitle {
   margin: 8dvh auto;
   font-size: 4rem;
-  /* color: rgba(255, 255, 255, 0.025); */
-  /* backdrop-filter: blur(50px); */
-  /* color: transparent; */
   max-width: 38%;
   text-align: center;
   color: white;
-  /* text-shadow: black 1px 1px; */
   animation: growAndFadeIn 0.7s linear;
-  /* backdrop-filter: blur(10px); / */
-  /* border-radius: 12px;
-  color: rgba(255, 255, 255, 0.714); */
   color: #ffffff;
-  /* background: #ffffff; */
   text-shadow: 1px 3px 0 #969696, -1px 0px 50px #aba8a8;
 }
 

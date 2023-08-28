@@ -89,6 +89,7 @@ function ContactUs() {
 
   return (
     <>
+      <div className={styles.navBackground}></div>
       <div className={styles.background}>
         <img src="public/assets/photos/logo.jpg" />
       </div>
@@ -135,10 +136,6 @@ function ContactUs() {
             </div>
           </div>
         </div>
-        {/* <img
-          className={`${styles.img} column`}
-          src="public/assets/photos/24131129_1566127380150960_1819579110054555952_n.jpg"
-        /> */}
       </div>
     </>
   );
