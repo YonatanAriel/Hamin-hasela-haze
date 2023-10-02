@@ -94,7 +94,7 @@ function Header() {
             className={`${styles.imgContainer} ${
               isImgSpinning ? styles.spin : ""
             }`}
-            src="public\assets\photos\logo.jpg"
+            src="\assets\photos\logo.jpg"
             onClick={handleImgAnimation}
           ></img>
           <div

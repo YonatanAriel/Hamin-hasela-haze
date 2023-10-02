@@ -71,7 +71,7 @@ function Card({ padding0, h1, p, imgSrc, index }) {
     (state) => state.language.currentLanguage
   );
   const location = useLocation().pathname;
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(screenWidth < 1024 ? true : false);
   const imgRef = useRef(null);
   const textRef = useRef(null);
   const imgStyle = {
@@ -91,24 +91,26 @@ function Card({ padding0, h1, p, imgSrc, index }) {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      rootMargin: "0px",
-      threshold: 0.1,
-    });
+    if (screenWidth > 1024) {
+      const observer = new IntersectionObserver(handleIntersection, {
+        rootMargin: "0px",
+        threshold: 0.1,
+      });
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => {
       if (imgRef.current) {
-        observer.unobserve(imgRef.current);
+        observer.observe(imgRef.current);
       }
-    };
+
+      return () => {
+        if (imgRef.current) {
+          observer.unobserve(imgRef.current);
+        }
+      };
+    }
   }, []);
 
   useEffect(() => {
-    if (isVisible) {
+    if (isVisible && screenWidth > 1024) {
       textRef.current.style.animation = "fadeInUp 1.5s ease-in-out";
       textRef.current.style.opacity = 1;
     }
@@ -132,7 +134,7 @@ function Card({ padding0, h1, p, imgSrc, index }) {
         className="column text"
         style={{
           textAlign: currentLanguage === "Hebrew" ? "right" : "left",
-          opacity: isVisible ? 1 : 0,
+          opacity: isVisible || screenWidth > 1024 ? 1 : 0,
         }}
       >
         <h1>{h1}</h1>

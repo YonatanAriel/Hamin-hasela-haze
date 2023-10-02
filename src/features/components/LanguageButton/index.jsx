@@ -24,6 +24,7 @@ function LanguageButton() {
     const newLanguage = await import(
       `../../../data/languages/${languageName}`
     ).then((module) => module.default);
+
     if (newLanguage) {
       dispatch(setLanguage(newLanguage));
       dispatch(setCurrentLanguage(languageName));
@@ -35,6 +36,7 @@ function LanguageButton() {
     if (localStorage.getItem("language")) {
       const storedLanguage = localStorage.getItem("language");
       ChangeLanguage(storedLanguage);
+
       return;
     }
     if (!(userPreferredLanguage === "he")) ChangeLanguage("English", true);

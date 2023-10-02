@@ -32,12 +32,12 @@ function Gallery() {
         {/* <li className={` d-flex`}>
         <img
           className="column"
-          src="public/assets/photos/unnamed.jpg"
+          src="/assets/photos/unnamed.jpg"
           alt="a guest house"
         />
         <img
           className="column"
-          src="public/assets/photos/WhatsApp Image 2018-06-13 at 09.02.12.jpeg"
+          src="/assets/photos/WhatsApp Image 2018-06-13 at 09.02.12.jpeg"
           alt=""
         />
       </li> */}
