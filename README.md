@@ -2,7 +2,7 @@
 
 a website for a B&B business i made as a freelancer.
 
-## Link to the website
+## Link to the temporary website
 [Hamin-hasela-haze](https://hamin-hasela-haze.netlify.app/).
 
 ## Features
