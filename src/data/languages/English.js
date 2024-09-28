@@ -48,7 +48,7 @@ const English = {
     },
   },
   contactUs: {
-    contactUs: "For booking details",
+    contactUs: "Booking details",
     phone: "Phone",
     phoneNumber: "0525382734",
     whatsapp: "0525382734",
