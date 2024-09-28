@@ -23,9 +23,9 @@ function LanguageButton() {
   const ChangeLanguage = useCallback(async (languageName, storeInLS) => {
     const newLanguage = await import(
       /* webpackInclude: /(English|Hebrew)\.js$/ */
-      `../../../data/languages/${languageName}`
+      // `../../../data/languages/${languageName}`
+      `../../../data/languages/${languageName}.js`
     ).then((module) => module.default);
-    // `../../../data/languages/${languageName}.js`
 
     if (newLanguage) {
       dispatch(setLanguage(newLanguage));
