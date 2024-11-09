@@ -61,6 +61,7 @@ function Layout() {
       </div>
       {["/inTheArea", "/"].includes(location) && (
         <img
+          alt="Background landscape"
           className={` ${styles.img}
           `}
           style={{

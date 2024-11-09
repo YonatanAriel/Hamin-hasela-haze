@@ -91,6 +91,7 @@ function Header() {
           }}
         >
           <img
+            alt="B&B logo"
             className={`${styles.imgContainer} ${
               isImgSpinning ? styles.spin : ""
             }`}

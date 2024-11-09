@@ -91,7 +91,7 @@ function ContactUs() {
     <>
       <div className={styles.navBackground}></div>
       <div className={styles.background}>
-        <img src="/assets/photos/logo.jpg" />
+        <img alt="B&B logo background" src="/assets/photos/logo.jpg" />
       </div>
       <div>
         <div

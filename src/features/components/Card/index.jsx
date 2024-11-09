@@ -71,6 +71,7 @@ function Card({ padding0, h1, p, imgSrc, index }) {
     (state) => state.language.currentLanguage
   );
   const location = useLocation().pathname;
+  const imgsAlt = location === "/" ? "B&B image" : "Location in the area";
   const [isVisible, setIsVisible] = useState(screenWidth < 1024 ? true : false);
   const imgRef = useRef(null);
   const textRef = useRef(null);
@@ -122,7 +123,7 @@ function Card({ padding0, h1, p, imgSrc, index }) {
         <img
           ref={imgRef}
           src={imgSrc}
-          alt="img"
+          alt={imgsAlt}
           className="column"
           style={imgStyle}
         />
@@ -144,7 +145,7 @@ function Card({ padding0, h1, p, imgSrc, index }) {
         <img
           ref={imgRef}
           src={imgSrc}
-          alt=""
+          alt={imgsAlt}
           className="column"
           style={imgStyle}
         />

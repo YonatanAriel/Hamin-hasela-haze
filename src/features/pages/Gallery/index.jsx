@@ -7,7 +7,11 @@ function Gallery() {
   const [showFullImg, setShowFullImg] = useState({ show: false, imgSrc: "" });
   return (
     <>
-      <img className={styles.backgroundImg} src={imgs[0]} />
+      <img
+        alt="Gallery background"
+        className={styles.backgroundImg}
+        src={imgs[0]}
+      />
       <ul className={` ${styles.galleryContainer} `}>
         {imgs?.map((imgSrc) => (
           <li
@@ -25,7 +29,7 @@ function Gallery() {
                 : ""
             }
           >
-            <img src={imgSrc} alt="an image" />
+            <img src={imgSrc} alt="B&B gallery image" />
           </li>
         ))}
       </ul>
