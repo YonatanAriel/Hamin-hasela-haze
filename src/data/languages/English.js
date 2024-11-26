@@ -35,19 +35,19 @@ const English = {
       title: "Discover what the area has to offer",
       section1: {
         h1: "Spring of Heroism",
-        p: `The genuine concern this time: After the Pitz Report, the treasury is preparing for the arrival of Economist Mody on the backdrop of the explanation that the relatively optimistic Pitz credit rating report was the result of an assessment that the legislation will not really be implemented. Senior officials in the treasury argue that Mody's next report, to be published in October, "could bring a tough decision to the economy." Mody's economists, who already lowered Israel's rating forecast last April, will be coming to Israel soon.`,
+        p: "Spring of Heroism, located near Eli, is a peaceful and serene spot for relaxing in nature. Surrounded by natural vegetation, the spring offers a spacious shaded area perfect for picnics and rest. The area features a pleasant walking trail where you can enjoy the tranquility and fresh air, with seating spots scattered along the way for breaks.",
       },
       section2: {
         h1: "Tel Shiloh",
-        p: `The genuine concern this time: After the Pitz Report, the treasury is preparing for the arrival of Economist Mody on the backdrop of the explanation that the relatively optimistic Pitz credit rating report was the result of an assessment that the legislation will not really be implemented. Senior officials in the treasury argue that Mody's next report, to be published in October, "could bring a tough decision to the economy." Mody's economists, who already lowered Israel's rating forecast last April, will be coming to Israel soon.`,
+        p: "Tel Shiloh is a stunning archaeological site near Eli, rich in history from biblical times. The Ark of the Covenant stood here for centuries, and now you can explore archaeological digs offering a glimpse into the past. It’s a great place for history enthusiasts, with accessible trails and scenic viewpoints where you can enjoy the unique atmosphere of the area.",
       },
       section3: {
-        h1: "Eye of the Gazelle",
-        p: `The genuine concern this time: After the Pitz Report, the treasury is preparing for the arrival of Economist Mody on the backdrop of the explanation that the relatively optimistic Pitz credit rating report was the result of an assessment that the legislation will not really be implemented. Senior officials in the treasury argue that Mody's next report, to be published in October, "could bring a tough decision to the economy." Mody's economists, who already lowered Israel's rating forecast last April, will be coming to Israel soon.`,
+        h1: "Spring of Valor",
+        p: "Spring of Valor is a natural spring located a short distance from Eli. It features a small pool surrounded by lush, colorful vegetation. The site offers a quiet and relaxing atmosphere, with a picnic area and a short walking trail. It’s an ideal spot for those looking for a secluded and peaceful place to unwind and enjoy nature.",
       },
       section4: {
         h1: "The Keron",
-        p: `The genuine concern this time: After the Pitz Report, the treasury is preparing for the arrival of Economist Mody on the backdrop of the explanation that the relatively optimistic Pitz credit rating report was the result of an assessment that the legislation will not really be implemented. Senior officials in the treasury argue that Mody's next report, to be published in October, "could bring a tough decision to the economy." Mody's economists, who already lowered Israel's rating forecast last April, will be coming to Israel soon.`,
+        p: "The Keron near Eli offers a breathtaking 360-degree panoramic view. The site includes comfortable seating areas and stunning views, perfect for watching the sunset and enjoying the serene atmosphere. It’s the ideal place for those seeking quality time in nature, with magnificent scenery and a tranquil environment.",
       },
     },
   },
